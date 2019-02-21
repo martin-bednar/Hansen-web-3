@@ -1,0 +1,36 @@
+		table{
+			border-collapse: collapse;
+			width: 100%;
+			max-width: 30em;
+			margin-left: auto;
+			margin-right: auto;
+			color: $table-color;
+		}
+		tr{
+			text-align: left;
+			transition: background-color 300ms linear;
+		}
+		tr:hover {background-color: rgba(255, 255, 255, 0.1);}
+		td{
+
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			padding: .5em;
+			vertical-align: top;
+		}
+
+		td:last-child{
+			text-align: right;
+			color: saturate($table-color, 20%);
+		}
+
+		#overlay{
+			table{
+
+			color:lighten(#3c1b1b, 50%);
+			}
+
+		table.produkce{
+			color:lighten(#1b3c1b, 50%);
+		}
+
+		}

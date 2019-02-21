@@ -18,15 +18,6 @@ $nudle-width:725px;
 @import 'table';
 @import 'text';
 
-html{
-  font-size: 15px;
-}
-@media only screen and (min-height: 600px) {
-  html{
-  font-size:2.5vh;
-  }
-}
-
 body{
 
 	padding: 0;
@@ -37,9 +28,6 @@ body{
   background-size: cover;
   background-position: center; 
   background-attachment: fixed;
-	color: $text-color-primary;
-  font-size: 1.3rem;
-	text-align: center;
 
 
 	display: flex;
@@ -116,18 +104,14 @@ h2:hover,h3:hover,h4:hover{
 h1{
   text-shadow: $text-color-shadow 1px 2px 0, $text-color-shadow-2 1px 1px 0;
 
-	font-size: 4rem;
 }
 h2{
   text-shadow: $text-color-shadow 2px 3px 0, $text-color-shadow-2 -1px 1px 1px, $text-color-shadow-2 1px 1px 0;
 
-  font-size: 3rem;
-  color:$text-color-primary;
 
 }
 
 h3{
-  font-size: 1.6rem;
   margin-top: 0.3rem;
   margin-bottom: 0.2rem;
 }
@@ -388,13 +372,7 @@ p{
       margin-left: auto;
       margin-right: auto;
     }
-a{
-  color:adjust-hue($text-color-primary, 300%);
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
+
 .external, p a:after{
   text-decoration: none;
   height: 1em;

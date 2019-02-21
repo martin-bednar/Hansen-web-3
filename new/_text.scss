@@ -1,8 +1,49 @@
+/* TEXT, FONT
+1.Global settings
+2.Headings
+3.Links
+*/
+
+/* 1. Global settings */
+
+html{
+	font-size: 15px;
+  }
+  @media only screen and (min-height: 600px) {
+	html{
+	font-size:2.5vh;
+	}
+  }
+  
 body{
 	font-family: $font-normal;
 	font-weight: 300;
+	font-size: 1.3rem;
+	color: $text-color-primary;
+	text-align: center;
 }
+
+/* 2. Headings */
 h1,h2,h3,h4,h5,.button{
 	font-family: $font-header;
 	font-weight: 400;
 }
+h1{
+	font-size: 4rem;
+}
+h2{
+	font-size: 3rem;
+	color:$text-color-primary;
+}
+h3{
+	font-size: 1.6rem;
+}
+
+/* 3. Links */
+a{
+	color:adjust-hue($text-color-primary, 300%);
+	text-decoration: none;
+  }
+  a:hover{
+	text-decoration: underline;
+  }

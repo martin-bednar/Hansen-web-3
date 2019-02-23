@@ -9,8 +9,10 @@ $text-color-shadow-2: rgba($text-color-shadow, 0.5);
 $bg-color-icon: lighten(desaturate($bg-color-primary, 80%), 90%);
 $table-color: lighten($text-color-primary, 60%);
 
-$font-header: 'Roboto Slab', serif;
-$font-normal:'Roboto Slab', sans-serif;
+$font-header: 'Montserrat', sans-serif;
+$font-normal:'Roboto Slab', serif;
+$font-header-weight: 600;
+$font-normal-weight: 300;
 
 $nudle-width:725px;
 @import 'bugfix';

@@ -131,7 +131,7 @@ html {
 }
 
 body {
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 300;
   font-size: 1.3rem;
   color: #ebc112;
@@ -140,8 +140,8 @@ body {
 
 /* 2. Headings */
 h1, h2, h3, h4, h5, .button {
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 h1 {

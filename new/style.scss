@@ -75,8 +75,7 @@ body{
           display: flex;
           flex-direction: column;
 
-          width: 100% !important;
-          flex-basis: 100% !important;
+          width: 100%;
 
         }
       }
@@ -88,7 +87,9 @@ body{
       flex-direction: row !important;
       align-items: space-between !important;
         justify-content: space-around !important;
-        >div{        }
+        >div{
+          width:initial !important;
+        }
     }
 }
 .fullscreen{
@@ -99,9 +100,6 @@ h1,h2,h3,h4,h5{
   text-align: center;
 
   //border-top: 1px solid rgba($text-color-primary, 0.2);
-}
-h2:hover,h3:hover,h4:hover{
-
 }
 h1{
   text-shadow: $text-color-shadow 1px 2px 0, $text-color-shadow-2 1px 1px 0;
@@ -135,15 +133,14 @@ h3{
   }
 }
 .triangles{
-  /*
+  
   height: 30px;
 
   background-image:url('img/triangle.svg'),  url('img/noise0.png');
   background-repeat: repeat-x, repeat-x;
-  background-size: contain, contain;*/
-  height: 1px;
-  //background-image: linear-gradient($text-color-low-contrast,$bg-color-primary);
-  background-color: $text-color-low-contrast;
+  background-size: contain, contain;
+  /*height: 1px;
+  background-color: $text-color-low-contrast;*/
   width: 100%;
   content: '';
   z-index: 1;
@@ -247,14 +244,14 @@ ol{
 }
 %icon{
 
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   
   background-image: url('img/insta.svg');
   background-size: cover;
   
   background-color: $bg-color-icon;
-  border-radius: 55%;
+  border-radius: 48%;
 }
 %icon:hover{
   background-color: lighten($bg-color-icon, 30%);
@@ -391,4 +388,11 @@ p{
   background-size: .3em .3em;
   background-repeat:no-repeat;
   background-position: 50% 10%;
+}
+a{
+  display: inline-block;
+}
+.padding-please{
+  padding-left: .5em;
+  padding-right: .5em;
 }

@@ -11,7 +11,7 @@ $table-color: lighten($text-color-primary, 60%);
 
 $font-header: 'Montserrat', sans-serif;
 $font-normal:'Roboto Slab', serif;
-$font-header-weight: 600;
+$font-header-weight: 500;
 $font-normal-weight: 300;
 
 $nudle-width:725px;
@@ -135,10 +135,15 @@ h3{
   }
 }
 .triangles{
+  /*
   height: 30px;
+
   background-image:url('img/triangle.svg'),  url('img/noise0.png');
   background-repeat: repeat-x, repeat-x;
-  background-size: contain, contain;
+  background-size: contain, contain;*/
+  height: 1px;
+  //background-image: linear-gradient($text-color-low-contrast,$bg-color-primary);
+  background-color: $text-color-low-contrast;
   width: 100%;
   content: '';
   z-index: 1;

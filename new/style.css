@@ -140,13 +140,13 @@ body {
 
 /* 2. Headings */
 h1 {
-  font-family: "Roboto Slab", serif;
-  font-weight: 300;
+  /*font-family: $font-normal;
+	font-weight: $font-normal-weight;*/
 }
 
-h2, h3, h4, h5, .button {
+h1, h2, h3, h4, h5, .button {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h1 {
@@ -325,10 +325,14 @@ h3 {
 }
 
 .triangles {
+  /*
   height: 30px;
-  background-image: url("img/triangle.svg"), url("img/noise0.png");
+
+  background-image:url('img/triangle.svg'),  url('img/noise0.png');
   background-repeat: repeat-x, repeat-x;
-  background-size: contain, contain;
+  background-size: contain, contain;*/
+  height: 1px;
+  background-color: #f8e69e;
   width: 100%;
   content: '';
   z-index: 1;

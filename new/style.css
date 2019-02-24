@@ -544,14 +544,17 @@ ol {
 .insta-icon, .fb-icon, .yt-icon, .sound-icon {
   height: 3.5rem;
   width: 3.5rem;
-  background-image: url("img/insta.svg");
+  background-image: url("img/icons/insta-alt1.svg");
   background-size: cover;
-  background-color: #f9f7f9;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 48%;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s;
 }
 
 .insta-icon:hover, .fb-icon:hover, .yt-icon:hover, .sound-icon:hover {
-  background-color: white;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s;
 }
 
 ul.social {
@@ -580,24 +583,42 @@ ul.social > li div {
 }
 
 ul.social > li div:hover {
-  height: 5rem;
-  width: 5rem;
+  -webkit-transition: width .3s,height .3s;
+  transition: width .3s,height .3s;
+  width: 4em;
+  height: 4em;
 }
 
 .insta-icon {
-  background-image: url("img/icons/insta.svg");
+  background-image: url("img/icons/insta-alt1.svg");
+}
+
+.insta-icon:hover {
+  background-image: url("img/icons/insta-alt1.svg"), url("img/icons/insta.svg");
 }
 
 .fb-icon {
-  background-image: url("img/icons/fb.svg");
+  background-image: url("img/icons/fb-alt1.svg");
+}
+
+.fb-icon:hover {
+  background-image: url("img/icons/fb-alt1.svg"), url("img/icons/fb.svg");
 }
 
 .yt-icon {
-  background-image: url("img/icons/yt.svg");
+  background-image: url("img/icons/yt-alt1.svg");
+}
+
+.yt-icon:hover {
+  background-image: url("img/icons/yt-alt1.svg"), url("img/icons/yt.svg");
 }
 
 .sound-icon {
-  background-image: url("img/icons/sound.svg");
+  background-image: url("img/icons/sound-alt1.svg");
+}
+
+.sound-icon:hover {
+  background-image: url("img/icons/sound-alt1.svg"), url("img/icons/sound.svg");
 }
 
 .navigation {

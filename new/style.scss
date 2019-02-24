@@ -247,14 +247,16 @@ ol{
   height: 3.5rem;
   width: 3.5rem;
   
-  background-image: url('img/insta.svg');
+  background-image: url('img/icons/insta-alt1.svg');
   background-size: cover;
   
-  background-color: $bg-color-icon;
+    background-color: rgba(0,0,0,0);
+  //border: 2px solid whitesmoke;
   border-radius: 48%;
+  transition: background-image 1s;
 }
 %icon:hover{
-  background-color: lighten($bg-color-icon, 30%);
+  transition: background-image 1s;
 }
 ul.social{
   position: relative;
@@ -275,27 +277,40 @@ ul.social{
     //box-shadow: 0 0  1px 2px rgba($bg-color-primary, 0.3);
     }
     div:hover{
-      //margin-top: 2%;
-      height: 5rem;
-      width: 5rem;
+      transition: width .3s,height .3s;
+      width: 4em;
+      height: 4em;
     }
   }
 }
 .insta-icon{
   @extend %icon;
-  background-image: url('img/icons/insta.svg');
+  background-image: url('img/icons/insta-alt1.svg');
+}
+.insta-icon:hover{
+  background-image: url('img/icons/insta-alt1.svg'),url('img/icons/insta.svg');
 }
 .fb-icon{
   @extend %icon;
-  background-image: url('img/icons/fb.svg');
+background-image: url('img/icons/fb-alt1.svg');
+}
+.fb-icon:hover{
+
+  background-image: url('img/icons/fb-alt1.svg'),url('img/icons/fb.svg');
 }
 .yt-icon{
   @extend %icon;
-  background-image: url('img/icons/yt.svg');
+  background-image: url('img/icons/yt-alt1.svg');
+}
+.yt-icon:hover{
+  background-image: url('img/icons/yt-alt1.svg'),url('img/icons/yt.svg');
 }
 .sound-icon{
   @extend %icon;
-  background-image: url('img/icons/sound.svg');
+  background-image: url('img/icons/sound-alt1.svg');
+}
+.sound-icon:hover{
+  background-image: url('img/icons/sound-alt1.svg'),url('img/icons/sound.svg');
 }
 
 .navigation{

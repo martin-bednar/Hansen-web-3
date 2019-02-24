@@ -72,8 +72,10 @@ function updatePosition(){ //Triggered by body onscroll event
     var scroll = window.pageYOffset / height * 100; //scroll in vh
     document.getElementById('logo-section').style.top=(scroll * 0.6)+"vh";
     document.getElementsByClassName('social')[0].style.top = (scroll * -0.12)+"vh";
-    document.getElementsByClassName('expander')[0].style.height = (scroll * 0.18)+"vh";
+    if(scroll<70){
+    document.getElementsByClassName('expander')[0].style.height = (Math.pow(scroll,1.1) * 0.29)+"vh";
     }
+}
 }
 
 //      5. Phone fix #2

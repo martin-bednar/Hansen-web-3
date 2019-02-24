@@ -144,7 +144,7 @@ h1 {
 	font-weight: $font-normal-weight;*/
 }
 
-h1, h2, h3, h4, h5, .button {
+h1, h2, h3, h4, h5, .button, header {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -173,6 +173,15 @@ h2 {
 h2 img {
   height: 3.5rem;
   width: auto;
+}
+
+header h2 {
+  margin-bottom: 0;
+}
+
+header em {
+  font-size: .9em;
+  opacity: .85;
 }
 
 h3 {

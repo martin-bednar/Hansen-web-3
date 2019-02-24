@@ -1,0 +1,9 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+
+<filesMatch ".(jpg|jpeg|png|gif|svg|mpeg)$">
+Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+# Gzip
+# Nefunguje...

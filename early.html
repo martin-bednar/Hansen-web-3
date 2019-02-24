@@ -11,9 +11,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:title" content="HANSEN" />
 		<meta property="og:description" content="Oficiální web kapely Hansen" />
-		<meta property="og:image" content="http://hansen-band.cz/img/01.jpg" />
+    <meta property="og:image" content="http://hansen-band.cz/img/01.jpg" />
+    <base href="new/">
 
-		<link rel="stylesheet" type="text/css" href="new/style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
 		<style type="text/css">
 		#counter span{
@@ -25,7 +26,12 @@
 		}
 		#counter{
 			transition: color 10s linear;
-		}
+    }
+    #preload{
+      width:0px;
+      height:0px;
+      opacity: 0;
+    }
 	</style>
 	
 </head>
@@ -34,7 +40,8 @@
 
 			<h1>Cheap Joke EP Incoming!</h1>
 			<h2 id="counter"><span id="d"></span><span id="h"></span><span id="m"></span><span id="s"></span></h2>
-		</section>
+    </section>
+    <iframe id="preload"></iframe>
 		<script type="text/javascript">
 			// Set the date we're counting down to
 var countDownDate = new Date("Mar 1, 2019 12:00:00").getTime();
@@ -67,7 +74,7 @@ var x = setInterval(function() {
 
 }, 1000);
 	function Setup(){
-  //document.getElementById('counter').style.color=randomColor({luminosity:'bright'});
+    document.getElementById('preload').src="../latest.html";
 }
 var y= setInterval(function(){
 

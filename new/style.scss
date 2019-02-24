@@ -9,8 +9,10 @@ $text-color-shadow-2: rgba($text-color-shadow, 0.5);
 $bg-color-icon: lighten(desaturate($bg-color-primary, 80%), 90%);
 $table-color: lighten($text-color-primary, 60%);
 
-$font-header: 'Roboto Slab', serif;
-$font-normal:'Roboto Slab', sans-serif;
+$font-header: 'Montserrat', sans-serif;
+$font-normal:'Roboto Slab', serif;
+$font-header-weight: 500;
+$font-normal-weight: 300;
 
 $nudle-width:725px;
 @import 'bugfix';
@@ -73,8 +75,7 @@ body{
           display: flex;
           flex-direction: column;
 
-          width: 100% !important;
-          flex-basis: 100% !important;
+          width: 100%;
 
         }
       }
@@ -86,7 +87,9 @@ body{
       flex-direction: row !important;
       align-items: space-between !important;
         justify-content: space-around !important;
-        >div{        }
+        >div{
+          width:initial !important;
+        }
     }
 }
 .fullscreen{
@@ -97,9 +100,6 @@ h1,h2,h3,h4,h5{
   text-align: center;
 
   //border-top: 1px solid rgba($text-color-primary, 0.2);
-}
-h2:hover,h3:hover,h4:hover{
-
 }
 h1{
   text-shadow: $text-color-shadow 1px 2px 0, $text-color-shadow-2 1px 1px 0;
@@ -133,10 +133,14 @@ h3{
   }
 }
 .triangles{
+  
   height: 30px;
+
   background-image:url('img/triangle.svg'),  url('img/noise0.png');
   background-repeat: repeat-x, repeat-x;
   background-size: contain, contain;
+  /*height: 1px;
+  background-color: $text-color-low-contrast;*/
   width: 100%;
   content: '';
   z-index: 1;
@@ -240,17 +244,19 @@ ol{
 }
 %icon{
 
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
   
-  background-image: url('img/insta.svg');
+  background-image: url('img/icons/insta-alt1.svg');
   background-size: cover;
   
-  background-color: $bg-color-icon;
-  border-radius: 55%;
+    background-color: rgba(0,0,0,0);
+  //border: 2px solid whitesmoke;
+  border-radius: 48%;
+  transition: background-image 1s;
 }
 %icon:hover{
-  background-color: lighten($bg-color-icon, 30%);
+  transition: background-image 1s;
 }
 ul.social{
   position: relative;
@@ -271,27 +277,40 @@ ul.social{
     //box-shadow: 0 0  1px 2px rgba($bg-color-primary, 0.3);
     }
     div:hover{
-      //margin-top: 2%;
-      height: 5rem;
-      width: 5rem;
+      transition: width .3s,height .3s;
+      width: 4em;
+      height: 4em;
     }
   }
 }
 .insta-icon{
   @extend %icon;
-  background-image: url('img/icons/insta.svg');
+  background-image: url('img/icons/insta-alt1.svg');
+}
+.insta-icon:hover{
+  background-image: url('img/icons/insta-alt1.svg'),url('img/icons/insta.svg');
 }
 .fb-icon{
   @extend %icon;
-  background-image: url('img/icons/fb.svg');
+background-image: url('img/icons/fb-alt1.svg');
+}
+.fb-icon:hover{
+
+  background-image: url('img/icons/fb-alt1.svg'),url('img/icons/fb.svg');
 }
 .yt-icon{
   @extend %icon;
-  background-image: url('img/icons/yt.svg');
+  background-image: url('img/icons/yt-alt1.svg');
+}
+.yt-icon:hover{
+  background-image: url('img/icons/yt-alt1.svg'),url('img/icons/yt.svg');
 }
 .sound-icon{
   @extend %icon;
-  background-image: url('img/icons/sound.svg');
+  background-image: url('img/icons/sound-alt1.svg');
+}
+.sound-icon:hover{
+  background-image: url('img/icons/sound-alt1.svg'),url('img/icons/sound.svg');
 }
 
 .navigation{
@@ -384,4 +403,11 @@ p{
   background-size: .3em .3em;
   background-repeat:no-repeat;
   background-position: 50% 10%;
+}
+a{
+  display: inline-block;
+}
+.padding-please{
+  padding-left: .5em;
+  padding-right: .5em;
 }

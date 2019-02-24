@@ -17,26 +17,54 @@ html{
   
 body{
 	font-family: $font-normal;
-	font-weight: 300;
-	font-size: 1.3rem;
+	font-weight: $font-normal-weight;
+	font-size: 1.1rem;
 	color: $text-color-primary;
 	text-align: center;
 }
 
 /* 2. Headings */
-h1,h2,h3,h4,h5,.button{
+h1{
+	/*font-family: $font-normal;
+	font-weight: $font-normal-weight;*/
+}
+h1,h2,h3,h4,h5,.button,header{
 	font-family: $font-header;
-	font-weight: 400;
+	font-weight: $font-header-weight;
 }
 h1{
 	font-size: 4rem;
+	img{
+		width: 90%;
+		height: auto;
+	}
+}
+@media only screen and (min-width:320px){
+	h1 img{
+
+		height: auto;
+		width: 20rem;
+	}
 }
 h2{
 	font-size: 3rem;
 	color:$text-color-primary;
+	img{
+		height: 3.5rem;
+		width: auto;
+	}
+}
+header{
+	h2{
+		margin-bottom: 0;
+	}
+	em{
+		font-size: .9em;
+		opacity: .85;
+	}
 }
 h3{
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 }
 
 /* 3. Links */

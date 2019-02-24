@@ -4,5 +4,5 @@
 		require 'early.html';
 		die();
 	}
-	require 'new/index.html';
+	require 'latest.html';
 ?>

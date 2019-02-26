@@ -1,0 +1,19 @@
+.top-bar{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 4rem;
+    background-color: $bg-color-primary;
+    border-bottom: 1px solid rgba($text-color-primary,0.3);
+    flex-direction: row;
+    
+    img{
+        height: 70%;
+        width: auto;
+    }
+}
+.faded .top-bar{
+    display: flex;
+}

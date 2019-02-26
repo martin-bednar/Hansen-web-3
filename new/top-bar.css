@@ -1,0 +1,14 @@
+.top-bar {
+  display: none;
+}
+
+.faded .top-bar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2em;
+  background-color: red;
+}
+/*# sourceMappingURL=top-bar.css.map */

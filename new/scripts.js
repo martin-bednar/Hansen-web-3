@@ -75,17 +75,16 @@ function updatePosition(){ //Triggered by body onscroll event
     document.getElementsByClassName('social')[0].style.top = (scroll * -0.12)+"vh";
         
     var element=document.getElementsByTagName("BODY")[0];
+    var name='faded';
+    var arr = element.className.split(" ");
         if(scroll>30){
-            var name='faded';
-           var arr = element.className.split(" ");
             if (arr.indexOf(name) == -1) {
             element.className += " " + name;
             }
-            
+
            } 
-        else{
-            console.log("removing class faded, scroll offset= "+scroll+". Larger than 30? "+(scroll>30));
-  element.className = element.className.replace(' faded', '');
+        else if (arr.indexOf(name) != -1) {
+            element.className = element.className.replace(' faded', '');
         }
             
     }

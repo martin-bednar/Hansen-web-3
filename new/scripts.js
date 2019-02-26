@@ -70,9 +70,10 @@ function updatePosition(){ //Triggered by body onscroll event
     if(!touchSupport) //Dokud nezjistim, jak to udelat funkcni, tak zakazat pro mobily
     {
     var scroll = window.pageYOffset / height * 100; //scroll in vh
+        scroll = Math.round(scroll * 100) / 100;
     document.getElementById('logo-section').style.top=(scroll * 0.6)+"vh";
     document.getElementsByClassName('social')[0].style.top = (scroll * -0.12)+"vh";
-    //document.getElementsByClassName('expander')[0].style.height = (scroll * 0.2)+"vh";
+
         if(scroll>30){
             var element=document.getElementById('logo-section');
             var name='faded';

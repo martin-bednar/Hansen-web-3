@@ -198,6 +198,30 @@ a:hover {
   text-decoration: underline;
 }
 
+#logo-section {
+  -webkit-transition: background .2s ease-in;
+  transition: background .2s ease-in;
+}
+
+#logo-section > * {
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+body.faded #logo-section {
+  background: #1a0025;
+}
+
+body.faded #logo-section > * {
+  opacity: 0;
+}
+
+body.faded .triangles {
+  opacity: 0 !important;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -334,21 +358,6 @@ h3 {
 
 #logo-section {
   position: relative;
-}
-
-#logo-section > #logo-outer {
-  /*
-  animation-name: logo-anim;
-  animation-duration: 1.6s;
-  animation-iteration-count: infinite;*/
-}
-
-#logo-section > #logo-outer > h1 {
-  color: #fbf1ff;
-  /*
-    animation-name: logo-anim-slow;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;*/
 }
 
 .triangles {

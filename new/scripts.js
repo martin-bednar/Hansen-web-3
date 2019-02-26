@@ -73,28 +73,22 @@ function updatePosition(){ //Triggered by body onscroll event
         scroll = Math.round(scroll * 100) / 100;
     document.getElementById('logo-section').style.top=(scroll * 0.6)+"vh";
     document.getElementsByClassName('social')[0].style.top = (scroll * -0.12)+"vh";
-<<<<<<< HEAD
-    if(scroll<70){
-    document.getElementsByClassName('expander')[0].style.height = (Math.pow(scroll,1.1) * 0.29)+"vh";
-=======
-
+        
+    var element=document.getElementsByTagName("BODY")[0];
         if(scroll>30){
-            var element=document.getElementById('logo-section');
             var name='faded';
            var arr = element.className.split(" ");
             if (arr.indexOf(name) == -1) {
             element.className += " " + name;
             }
+            
            } 
-        else if(scroll<30){
+        else{
             console.log("removing class faded, scroll offset= "+scroll+". Larger than 30? "+(scroll>30));
-  var element = document.getElementById('logo-section');
   element.className = element.className.replace(' faded', '');
         }
             
->>>>>>> origin/master
     }
-}
 }
 
 //      5. Phone fix #2

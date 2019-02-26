@@ -1,0 +1,20 @@
+#logo-section{
+    transition: background .2s ease-in;
+    >*{
+
+        transition: opacity .2s;
+    }
+}
+body.faded{
+ #logo-section{
+     
+    background: $bg-color-primary;
+    >*{
+      opacity: 0;
+    }
+  }
+  .triangles{
+      opacity: 0 !important;
+      transition: opacity .2s;
+  }
+}

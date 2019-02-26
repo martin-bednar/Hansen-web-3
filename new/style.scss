@@ -19,7 +19,7 @@ $nudle-width:725px;
 @import 'overlay';
 @import 'table';
 @import 'text';
-@import 'expander';
+@import 'fade-effect';
 
 body{
 
@@ -119,20 +119,8 @@ h3{
 
 #logo-section{
   position: relative;
-  >#logo-outer{
-    /*
-  animation-name: logo-anim;
-  animation-duration: 1.6s;
-  animation-iteration-count: infinite;*/
-    >h1{
-    color: lighten($bg-color-primary, 90%);
-    /*
-    animation-name: logo-anim-slow;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;*/
-    }
-  }
 }
+
 .triangles{
   
   height: 30px;

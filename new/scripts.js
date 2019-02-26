@@ -81,9 +81,9 @@ function updatePosition(){ //Triggered by body onscroll event
             element.className += " " + name;
             }
         else{
-            
+            console.log("removing class faded, scroll offset= "+scroll);
   var element = document.getElementById('logo-section');
-  element.className = element.className.replace('faded', "");
+  element.className = element.className.replace(' faded', '');
         }
             
         }

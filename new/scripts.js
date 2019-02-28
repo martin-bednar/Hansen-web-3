@@ -77,7 +77,7 @@ function updatePosition(){ //Triggered by body onscroll event
     var element=document.getElementsByTagName("BODY")[0];
     var name='faded';
     var arr = element.className.split(" ");
-        if(scroll>30){
+        if(scroll>55){
             if (arr.indexOf(name) == -1) {
             element.className += " " + name;
             }

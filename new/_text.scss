@@ -24,10 +24,6 @@ body{
 }
 
 /* 2. Headings */
-h1{
-	/*font-family: $font-normal;
-	font-weight: $font-normal-weight;*/
-}
 h1,h2,h3,h4,h5,.button,header{
 	font-family: $font-header;
 	font-weight: $font-header-weight;
@@ -69,7 +65,7 @@ h3{
 
 /* 3. Links */
 a{
-	color:adjust-hue($text-color-primary, 300%);
+	color: hsl(0,95%,70%);
 	text-decoration: none;
   }
   a:hover{

@@ -1,6 +1,4 @@
-//$bg-color-primary:#C1C5CC;
-//$text-color-primary:#332E2E; //default text color
-$bg-color-primary: rgb(26,0,37);
+$bg-color-primary: #1a0025;
 $text-color-primary: desaturate(rgb(248,201,5),10%);
 
 $text-color-low-contrast: lighten($text-color-primary,30%);
@@ -21,6 +19,7 @@ $nudle-width:725px;
 @import 'text';
 @import 'fade-effect';
 @import 'top-bar';
+@import 'sticky';
 
 body{
 
@@ -41,7 +40,6 @@ body{
       //justify-content: center;
     >*{
       max-width: 100%;
-      overflow: hidden;
     }
   	>section{
   		width: 100%;
@@ -101,7 +99,6 @@ body{
 h1,h2,h3,h4,h5{
   text-align: center;
 
-  //border-top: 1px solid rgba($text-color-primary, 0.2);
 }
 h1{
   text-shadow: $text-color-shadow 1px 2px 0, $text-color-shadow-2 1px 1px 0;
@@ -155,7 +152,8 @@ h3{
 
 	#ep-player{
     border: none;
-		width: 25rem;
+    width: 25rem;
+    max-width: 100%;
     height: 42rem;
 	}
 @media only screen and (min-width: 375px) {
@@ -170,7 +168,6 @@ h3{
   		flex-wrap: nowrap;
   		justify-content: center;
       width: 30rem;
-      font-size: 0.8em;
 }
 .arrow{
  font-size: 3rem;
@@ -309,12 +306,9 @@ background-image: url('img/icons/fb-alt1.svg');
 .clickable{
     transition: height .1s ease-out .05s, width .1s ease-out .05s, margin-top .1s ease-out .05s;
 }
-.footer .button{
-  background-color: $bg-color-primary;
-}
 .button{
-
-      transition: background-color 200ms linear;
+      box-sizing: border-box;
+      transition: all 200ms linear;
   display: inline-block;
   >span{
     opacity: 1;
@@ -327,23 +321,30 @@ background-image: url('img/icons/fb-alt1.svg');
   margin-top: 1rem;
   padding: .5rem;
   letter-spacing: .1rem;
-  //background-color: lighten($bg-color-primary, 15%);
-  border: 1px solid rgba($text-color-primary, 0.3);
-  color: $text-color-primary !important;
+  
+  background-color: $text-color-primary;
+  color: $bg-color-primary;
   border-radius: 7px;
 }
 .button:hover{
-  background-color: $text-color-primary;
-  color: $bg-color-primary !important;
   cursor: pointer;
+  background-color: #f8e69e;
+}
+.button__secondary {
+  background-color: $bg-color-primary;
+  color: $text-color-primary;
+}
+.button__secondary:hover {
+  color: $bg-color-primary;
+}
+.button__primary {
+  padding: 1rem;
 }
 .okecy{
   text-align: left;
   text-align: justify;
 }
 p{
-  padding-left:1rem;
-  padding-right:1rem;
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
   max-width: 40em;
@@ -382,7 +383,7 @@ p{
       margin-right: auto;
     }
 
-.external, p a:after{
+.external:after, p a:after{
   text-decoration: none;
   height: 1em;
   width: 1em;

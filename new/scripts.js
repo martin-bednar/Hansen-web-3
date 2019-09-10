@@ -90,20 +90,6 @@ function updatePosition(){ //Triggered by body onscroll event
     }
 }
 
-//      5. Phone fix #2
-function viewportFix(touchSupport){ //Triggered on body load
-    if(touchSupport||debug){
-        var height = window.innerHeight
-            || document.documentElement.clientHeight
-            || document.body.clientHeight; 
-        var oneVh = height/100; //1 vh in pixels
-        console.log("1 vh = "+oneVh+" px.");
-        if (height>600){
-            document.documentElement.style.fontSize= oneVh*2.5 + "px";
-        }
-    }
-}
-
 //      Kontakt
 function selectText(containerid) {
     if (document.selection) { // IE

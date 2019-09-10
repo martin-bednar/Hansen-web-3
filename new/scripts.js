@@ -21,9 +21,6 @@ window.onload = function(){
     //3.
     smartphoneInit(touchSupport);
 
-    //4.
-    viewportFix(touchSupport);
-    
     //Log
     console.log(
         "Hansen website v1.1 (14.02.2019)"

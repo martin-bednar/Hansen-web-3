@@ -166,8 +166,9 @@ h3{
 	display: flex;
   		flex-direction: column;
   		flex-wrap: nowrap;
-  		justify-content: center;
-      width: 30rem;
+      justify-content: center;
+      flex-grow: 1;
+      flex-basis: 20rem;
 }
 .arrow{
  font-size: 3rem;
